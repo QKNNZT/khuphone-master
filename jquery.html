@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <style>
+.active{
+    border: 10px solid rgb(199, 13, 13);
+}
+
+  </style>
+  <body>
+    <div
+
+      style="
+        height: 100px;
+        width: 100px;
+        background-color: black;
+        border-radius: 50%;
+      "
+      data-title="black"
+    ></div>
+    <br>
+    <div
+
+      style="
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        border-radius: 50%;
+      "
+      data-title="red"
+    ></div>
+    <br>
+    <div
+
+      style="
+        height: 100px;
+        width: 100px;
+        background-color: hotpink;
+        border-radius: 50%;
+      "
+      data-title="hotpink"
+    ></div>
+    <input type="text" />color
+  </body>
+
+  <script>
+    $(document).ready(function () {
+      $("[data-title]").click(function () {
+        var color = $(this).attr("data-title");
+        if($("[data-title]").attr("data-title")==color)
+       $(this).addClass("active");
+      });
+    });
+  </script>
+
+</html>
